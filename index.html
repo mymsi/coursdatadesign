@@ -25,6 +25,29 @@
     <div>
         <ahttps://dbdiagram.io/d/My-first-diagram-651c1913ffbf5169f0f210e8>avancée sur les tables </a>
     </div>
+    <div>
+        <h2>Séance 7</h2>
+            <p>Design web </br> Obéit au principe DOM (Document Object Managment (vérifier signification du M))</p>
+            <p>Balise que je ne connaissais pas : < canva > qui prend en charge les éléments matriciels et < svg > dont je ne pensais pas qu'il avait sa propre balise. Question par rapport au svg : est-ce qu'on peut l'animer directement dans le HTML ou doit-on mettre le nez dans le code svg et récupérer les id des différents éléments qui s'y trouvent pour leur assigner un comportement/une animation dans un fichiers JavasScript associé ?</p>
+            </br>
+                <p>Changer une couleur de manière aléatoire</p>
+                <p><style>
+                    .cen {
+                        border:1px solid gray;
+                        width:100px;
+                        height:100px;
+                        margin:2px;
+                </style>
+                <script>
+                    window.onload = function(){
+                        for(var i = 0; i < 10; i++){
+                            document.getElementById("page").innerHTML += '<div class="cen" style="background-color:rgb(' + Math.random()*255 + ',' + Math.random()*255 + ',' + Math.random()*255 + ');>' i+ '</div>';}}
+                </script>
+                PArtie html : 
+                <div id="page"></div>
+                
+                </p>
+    </div>
         
 </body>
 </html>
