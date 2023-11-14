@@ -15,23 +15,7 @@
                 border: 1px solid grey;
             }
         </style>
-        <script>
 
-            /*script pour le canvas*/
-            window.onload = function(){
-                var canvas = document.getElementById("monCanvas");
-                var ctx = canvas.getContext("2d");
-                ctx.moveTo(0,0);
-                ctx.lineTo(150,100);
-                ctx.stroke(); 
-                ctx.strokeStyle = "red";
-                for(var i = 0; i < 10; i++){
-                    ctx.moveTo(Math.random()*300, Math.random()*200);
-                    ctx.lineTo(150,100);
-                    ctx.stroke(); 
-                }
-            }
-        </script>
     </head>
     <body>
         <h1>Exercices cours data design</h1>
@@ -60,13 +44,6 @@
             <p>Balises que je ne connaissais pas : < canva > qui prend en charge les éléments matriciels et < svg > dont je ne pensais pas qu'il avait sa propre balise. Question par rapport au svg : est-ce qu'on peut l'animer directement dans le HTML ou doit-on mettre le nez dans le code svg et récupérer les id des différents éléments qui s'y trouvent pour leur assigner un comportement/une animation dans un fichiers JavasScript associé ?</p>
                 </br>
             <p>Changer une couleur de manière aléatoire</p>
-                    <script>
-                        window.onload = function(){
-                            for(var i = 0; i < 10; i++){
-                                document.getElementById("page").innerHTML += '<div class="cen" style="background-color:rgb(' + Math.random()*255 + ',' + Math.random()*255 + ',' + Math.random()*255;')">'; i+ '</div>';
-                            }
-                        }
-                    </script>
             Partie html : 
             <div id="page" class="cen"></div>
                     
@@ -75,7 +52,27 @@
             <h2>Séance 8</h2>
             <p>Canvas : perm de manipuler des la 2D comme de la 3D puisque fonctionnant par matrice, qui permettent de modéliser les axes des abcisses ordonnée et profondeur. Une balise canvas doit toujorus avoir un ID. Le canvas est un élément c=qu'on ne voit pas, de la même manière qu'une div. Un élément canvas permet de "dessiner digitalement". Grâce à des commandes JavaScript qui lui sont propres (voir le head pour les exemples) on peut créer des lignes, des dessins de manière informatiques, ou générer des dessins aléatoires (grâce à la fonction Math random). Exemple:</p>
             <canvas id="monCanvas" width="300" height="200"> Hello</canvas>
-        </div>
-            
+        </div>    
     </body>
+    <script>
+        window.onload = function(){
+            for(var i = 0; i < 10; i++){
+                document.getElementById("page").innerHTML += '<div class="cen" style="background-color:rgb(' + Math.random()*255 + ',' + Math.random()*255 + ',' + Math.random()*255;')">'; i+ '</div>';
+            }
+        }
+        /*script pour le canvas*/
+        window.onload = function(){
+                var canvas = document.getElementById("monCanvas");
+                var ctx = canvas.getContext("2d");
+                ctx.moveTo(0,0);
+                ctx.lineTo(150,100);
+                ctx.stroke(); 
+                ctx.strokeStyle = "red";
+                for(var i = 0; i < 10; i++){
+                    ctx.moveTo(Math.random()*300, Math.random()*200);
+                    ctx.lineTo(150,100);
+                    ctx.stroke(); 
+                }
+            }
+    </script>
 </html>
