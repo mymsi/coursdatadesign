@@ -4,6 +4,13 @@
         <meta charset="UTF-8" />
         <title>Test</title>
         <style>
+            .cen {
+                border:1px solid gray;
+                width:100px;
+                height:100px;
+                margin:2px;
+            }
+
             canvas{
                 border: 1px solid grey;
             }
@@ -49,18 +56,10 @@
         </div>
         <div>
             <h2>Séance 7</h2>
-                <p>Design web </br> Obéit au principe DOM (Document Object Managment (vérifier signification du M))</p>
-                <p>Balises que je ne connaissais pas : < canva > qui prend en charge les éléments matriciels et < svg > dont je ne pensais pas qu'il avait sa propre balise. Question par rapport au svg : est-ce qu'on peut l'animer directement dans le HTML ou doit-on mettre le nez dans le code svg et récupérer les id des différents éléments qui s'y trouvent pour leur assigner un comportement/une animation dans un fichiers JavasScript associé ?</p>
+            <p>Design web </br> Obéit au principe DOM (Document Object Managment (vérifier signification du M))</p>
+            <p>Balises que je ne connaissais pas : < canva > qui prend en charge les éléments matriciels et < svg > dont je ne pensais pas qu'il avait sa propre balise. Question par rapport au svg : est-ce qu'on peut l'animer directement dans le HTML ou doit-on mettre le nez dans le code svg et récupérer les id des différents éléments qui s'y trouvent pour leur assigner un comportement/une animation dans un fichiers JavasScript associé ?</p>
                 </br>
-                    <p>Changer une couleur de manière aléatoire</p>
-                    <p><style>
-                        .cen {
-                            border:1px solid gray;
-                            width:100px;
-                            height:100px;
-                            margin:2px;
-                        }
-                    </style>
+            <p>Changer une couleur de manière aléatoire</p>
                     <script>
                         window.onload = function(){
                             for(var i = 0; i < 10; i++){
@@ -68,10 +67,9 @@
                             }
                         }
                     </script>
-                    Partie html : 
-                    <div id="page"></div>
+            Partie html : 
+            <div id="page" class="cen"></div>
                     
-                    </p>
         </div>
         <div>
             <h2>Séance 8</h2>
